@@ -1,0 +1,136 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.skinCustomisation.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 20,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 16.7,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 0,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "CAPE"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 0,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "JACKET"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 24,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "LEFT_SLEEVE"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 24,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "RIGHT_SLEEVE"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 48,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "LEFT_PANTS_LEG"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 48,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "RIGHT_PANTS_LEG"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 72,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "toggleSkinPart",
+						"part": "HAT"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 72,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "MAIN_HAND"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.done",
+					"posX": -100,
+					"posY": 96,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "closeGui"
+					}
+				}
+			]
+		}
+	]
+}

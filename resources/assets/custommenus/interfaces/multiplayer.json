@@ -1,0 +1,170 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "multiplayer.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 20,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "list",
+			"name": "servers",
+			"top": 32,
+			"bottom": 64,
+			"itemHeight": 36,
+			"listWidth": 305,
+			"datasource": "servers",
+			"itemTemplate": {
+				"action": {
+					"type": "joinServer"
+				},
+				"icon": {
+					"posX": 2,
+					"posY": 2
+				},
+				"title": {
+					"posX": 37,
+					"posY": 3
+				},
+				"detail": {
+					"posX": 37,
+					"posY": 15,
+					"color": 8421504
+				},
+				"extra": {
+					"posX": 288,
+					"posY": 1,
+					"color": 8421504
+				},
+				"signal": {
+					"posX": -13,
+					"posY": 2,
+					"width": 15,
+					"height": 8,
+					"alignment": "top_right"
+				}
+			},
+			"elements": [
+	            {
+	            	"type": "throbber",
+	            	"text": "lanServer.scanning",
+	            	"alignment": "top_center"
+	            }
+            ],
+			"change": {
+				"type": "modifyElements",
+				"targets": [
+		            "edit", "delete", "play"
+	            ],
+				"apply": {
+					"enabled": true
+				}
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "play",
+			"enabled": false,
+			"text": "selectServer.select",
+			"posX": -154,
+			"posY": -52,
+			"width": 100,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "joinServer",
+				"serverListField": "servers"
+			}
+		},
+		{
+			"type": "button",
+			"text": "selectServer.add",
+			"posX": 54,
+			"posY": -52,
+			"width": 100,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterServer",
+				"serverListField": "servers",
+				"action": "add"
+			}
+		},
+		{
+			"type": "button",
+			"text": "selectServer.direct",
+			"posX": -50,
+			"posY": -52,
+			"width": 100,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterServer",
+				"action": "direct"
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "edit",
+			"enabled": false,
+			"text": "selectServer.edit",
+			"posX": -154,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterServer",
+				"serverListField": "servers",
+				"action": "edit"
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "delete",
+			"enabled": false,
+			"text": "selectServer.delete",
+			"posX": -76,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterServer",
+				"title": "selectServer.deleteQuestion",
+				"question": "selectServer.deleteWarning",
+				"confirmText": "selectServer.deleteButton",
+				"cancelText": "gui.cancel",
+				"serverListField": "servers",
+				"action": "delete"
+			}
+		},
+		{
+			"type": "button",
+			"text": "selectServer.refresh",
+			"posX": 4,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "refresh"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.cancel",
+			"posX": 82,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

@@ -1,0 +1,164 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.sounds.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 19,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 16,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 0,
+					"width": 310,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "master"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 24,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "music"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 24,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "record"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 48,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "weather"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 48,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "block"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 72,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "hostile"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 72,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "neutral"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 96,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "player"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 96,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "ambient"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 120,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustSound",
+						"category": "voice"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -75,
+					"posY": 144,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "SHOW_SUBTITLES"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.done",
+					"posX": -100,
+					"posY": 180,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "closeGui"
+					}
+				}
+			]
+		}
+	]
+}

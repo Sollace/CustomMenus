@@ -1,0 +1,158 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "selectWorld.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 20,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "list",
+			"name": "worlds",
+			"top": 32,
+			"bottom": 64,
+			"itemHeight": 36,
+			"listWidth": 305,
+			"datasource": "saves",
+			"itemTemplate": {
+				"action": {
+					"type": "joinGame",
+					"title": "selectWorld.versionQuestion",
+					"question": "selectWorld.versionWarning",
+					"confirmText": "selectWorld.versionJoinButton",
+					"cancelText": "gui.cancel"
+				},
+				"icon": {
+					"posX": 2,
+					"posY": 2
+				},
+				"title": {
+					"posX": 37,
+					"posY": 3
+				},
+				"detail": {
+					"posX": 37,
+					"posY": 15,
+					"color": 8421504
+				},
+				"extra": {
+					"posX": 37,
+					"posY": 24,
+					"color": 8421504
+				}
+			},
+			"change": {
+				"type": "modifyElements",
+				"targets": [
+		            "edit", "copy", "delete", "play"
+	            ],
+				"apply": {
+					"enabled": true
+				}
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "play",
+			"enabled": false,
+			"text": "selectWorld.select",
+			"posX": -154,
+			"posY": -52,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "joinGame",
+				"title": "selectWorld.versionQuestion",
+				"question": "selectWorld.versionWarning",
+				"confirmText": "selectWorld.versionJoinButton",
+				"cancelText": "gui.cancel",
+				"worldListField": "worlds"
+			}
+		},
+		{
+			"type": "button",
+			"text": "selectWorld.create",
+			"posX": 4,
+			"posY": -52,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "openGui",
+				"gui": "createworld"
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "edit",
+			"enabled": false,
+			"text": "selectWorld.edit",
+			"posX": -154,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterWorld",
+				"worldListField": "worlds",
+				"action": "edit"
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "delete",
+			"enabled": false,
+			"text": "selectWorld.delete",
+			"posX": -76,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"alignment": "bottom_center",
+			"action": {
+				"type": "yesno",
+				"title": "selectWorld.deleteQuestion",
+				"question": "selectWorld.deleteWarning",
+				"confirmText": "selectWorld.deleteButton",
+				"cancelText": "gui.cancel",
+				"yes": {
+					"type": "alterWorld",
+					"worldListField": "worlds",
+					"action": "delete"
+				}
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "copy",
+			"enabled": false,
+			"text": "selectWorld.recreate",
+			"posX": 4,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "alterWorld",
+				"worldListField": "worlds",
+				"action": "recreate"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.cancel",
+			"posX": 82,
+			"posY": -28,
+			"width": 72,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.snooper.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 8,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "label",
+			"text": "options.snooper.desc",
+			"wrap": true,
+			"color": 8421504,
+			"centered": true,
+			"posX": 0,
+			"posY": 22,
+			"alignment": "top_left"
+		},
+		{
+			"type": "list",
+			"top": 80,
+			"bottom": 40,
+			"listWidth": -20,
+			"unitlistWidth": "OFFSET",
+			"datasource": "snooper"
+		},
+		{
+			"type": "button",
+			"posX": -152,
+			"posY": -30,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "changeOption",
+				"option": "SNOOPER_ENABLED"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.done",
+			"posX": 2,
+			"posY": -30,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

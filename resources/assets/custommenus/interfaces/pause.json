@@ -1,0 +1,102 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "menu.game",
+			"centered": true,
+			"shadow": true,
+			"posY": 20,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 25,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "button",
+					"text": "menu.returnToGame",
+					"posX": -100,
+					"posY": 8,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "closeGui"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.advancements",
+					"posX": -100,
+					"posY": 32,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "advancements"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.stats",
+					"posX": 2,
+					"posY": 32,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "stats"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.options",
+					"posX": -100,
+					"posY": 80,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "options"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.shareToLan",
+					"posX": 2,
+					"posY": 80,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"visibility": {
+						"condition": "LAN_GAME",
+						"apply": {
+							"enabled": false
+						}
+					},
+					"action": {
+						"type": "openGui",
+						"gui": "sharelan"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.returnToMenu",
+					"posX": -100,
+					"posY": 104,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "endGame"
+					}
+				}
+			]
+		}
+	]
+}

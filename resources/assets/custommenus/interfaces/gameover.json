@@ -1,0 +1,141 @@
+{
+	"pausesGame": false,
+	"root": true,
+	"drawBackground": false,
+	"startup": [
+        {
+        	"type": "delayed",
+        	"delay": 20,
+        	"action": {
+	        	"type": "modifyElements",
+	        	"targets": [ "respawn", "leave" ],
+	        	"apply": {
+		        	"enabled": true
+		        }
+	        }
+        }
+    ],
+	"elements": [
+        {
+        	"type": "gradient",
+        	"start": 1615855616,
+        	"end": -1602211792
+        },
+		{
+			"type": "label",
+			"text": "deathScreen.title",
+			"color": 16777215,
+			"centered": true,
+			"shadow": true,
+			"size": 2,
+			"posY": 60,
+			"posX": 0,
+			"alignment": "top_center",
+			"visibility": {
+				"condition": "IN_GAME_HARDCORE",
+				"apply": {
+					"text": "deathScreen.title.hardcore"
+				}
+			}
+		},
+		{
+			"type": "label",
+			"format": {
+				"text": "%s: \u00a7e%s",
+				"parameters": [
+					"deathScreen.score",
+					{ "from": "minecraft:player:score" }
+                ]
+			},
+			"shadow": true,
+			"color": 16777215,
+			"centered": true,
+			"posY": 100,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "label",
+			"format": {
+				"text": "%s",
+				"parameters": [
+					{ "from": "minecraft:player:cause_of_death" }
+                ]
+			},
+			"shadow": true,
+			"color": 16777215,
+			"centered": true,
+			"posY": 85,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 25,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "named-button",
+					"name": "respawn",
+					"text": "deathScreen.respawn",
+					"enabled": false,
+					"posX": -100,
+					"posY": 72,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"visibility": {
+						"condition": "IN_GAME_HARDCORE",
+						"apply": {
+							"text": "deathScreen.spectate"
+						}
+					},
+					"action": {
+						"type": "respawn"
+					}
+				},
+				{
+					"type": "named-button",
+					"name": "leave",
+					"text": "deathScreen.titleScreen",
+					"enabled": false,
+					"posX": -100,
+					"posY": 96,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"visibility": {
+						"condition": "IN_GAME_HARDCORE",
+						"apply": {
+							"text": "deathScreen.leaveServer",
+							"visibility": {
+								"condition": "IN_GAME_SINGLEPLAYER",
+								"apply": {
+									"text": "deathScreen.deleteWorld",
+									"action": {
+										"type": "openGui",
+										"gui": "mainmenu"
+									}
+								}
+							}
+						}
+					},
+					"action": {
+						"type": "yesno",
+						"title": "deathScreen.quit.confirm",
+						"question": "",
+						"confirmText": "deathScreen.titleScreen",
+						"cancelText": "deathScreen.respawn",
+						"delay": 20,
+						"yes": {
+							"type": "endGame"
+						},
+						"no": {
+							"type": "respawn"
+						}
+					}
+				}
+             ]
+		}
+	]
+}

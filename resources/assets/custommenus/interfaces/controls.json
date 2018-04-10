@@ -1,0 +1,119 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "controls.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 8,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "button",
+			"posX": -155,
+			"posY": 18,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center",
+			"action": {
+				"type": "changeOption",
+				"option": "INVERT_MOUSE"
+			}
+		},
+		{
+			"type": "slider",
+			"posX": 5,
+			"posY": 18,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center",
+			"action": {
+				"type": "adjustOption",
+				"option": "SENSITIVITY"
+			}
+		},
+		{
+			"type": "button",
+			"posX": -155,
+			"posY": 42,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center",
+			"action": {
+				"type": "changeOption",
+				"option": "TOUCHSCREEN"
+			}
+		},
+		{
+			"type": "button",
+			"posX": 5,
+			"posY": 42,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center",
+			"action": {
+				"type": "changeOption",
+				"option": "AUTO_JUMP"
+			}
+		},
+		{
+			"type": "list",
+			"top": 63,
+			"bottom": 32,
+			"itemHeight": 20,
+			"listWidth": 321,
+			"resetButton": "reset",
+			"datasource": "controls",
+			"labelTemplate": {
+				"centered": true,
+				"alignment": "top_center"
+			},
+			"itemTemplate": {
+				"top": -9,
+				"left": -5,
+				"right": 2,
+				"label": {
+					"alignment": "center_left"
+				},
+				"bind": {
+					"width": 75,
+					"height": 20,
+					"alignment": "center_right"
+				},
+				"reset": {
+					"text": "controls.reset",
+					"width": 50,
+					"height": 20,
+					"alignment": "center_right"
+				}
+			}
+		},
+		{
+			"type": "named-button",
+			"name": "reset",
+			"text": "controls.resetAll",
+			"enabled": false,
+			"posX": -155,
+			"posY": -29,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "resetKeyBindings"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.done",
+			"posX": 5,
+			"posY": -29,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

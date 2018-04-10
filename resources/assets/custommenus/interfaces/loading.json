@@ -1,0 +1,41 @@
+{
+	"drawBackgroundInGame": true,
+	"root": true,
+	"elements": [
+		{
+			"type": "label",
+			"color": 16777215,
+			"format": {
+				"from": "progress:title"
+			},
+			"centered": true,
+			"posX": 0,
+			"posY": -20,
+			"alignment": "center_center"
+		},
+		{
+			"type": "progressbar",
+			"from": "progress:progress",
+			"posX": -50,
+			"posY": 0,
+			"width": 100,
+			"height": 2,
+			"alignment": "center_center"
+		},
+		{
+			"type": "label",
+			"color": 16777215,
+			"format": {
+				"text": "%s %s",
+				"parameters": [
+	            	{ "from": "progress:stage" },
+	            	{ "from": "progress:percentage" }
+                ]
+			},
+			"centered": true,
+			"posX": 0,
+			"posY": 20,
+			"alignment": "center_center"
+		}
+	]
+}

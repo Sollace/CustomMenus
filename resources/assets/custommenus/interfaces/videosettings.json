@@ -1,0 +1,228 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.videoTitle",
+			"centered": true,
+			"shadow": true,
+			"posY": 5,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "scroll",
+			"top": 32,
+			"bottom": 32,
+			"elements": [
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 4,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "GRAPHICS"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 4,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "RENDER_DISTANCE"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 29,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "AMBIENT_OCCLUSION"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 29,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "FRAMERATE_LIMIT"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 54,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "ANAGLYPH"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 54,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "VIEW_BOBBING"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 79,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "GUI_SCALE"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 79,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "ATTACK_INDICATOR"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 104,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "GAMMA"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 104,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "RENDER_CLOUDS"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 129,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "PARTICLES"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 129,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "USE_FULLSCREEN"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 154,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "ENABLE_VSYNC"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 154,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "MIPMAP_LEVELS"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 179,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "USE_VBO"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 179,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "ENTITY_SHADOWS"
+					}
+				}
+			]
+		},
+		{
+			"type": "button",
+			"text": "gui.done",
+			"posX": -100,
+			"posY": -27,
+			"width": 200,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

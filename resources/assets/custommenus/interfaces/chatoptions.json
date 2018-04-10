@@ -1,0 +1,164 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.chat.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 20,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 16.7,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 0,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "CHAT_VISIBILITY"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 0,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "CHAT_COLOR"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 24,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "CHAT_LINKS"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 24,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "CHAT_OPACITY"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 48,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "CHAT_LINKS_PROMPT"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 48,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "CHAT_SCALE"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 72,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "CHAT_HEIGHT_FOCUSED"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": 5,
+					"posY": 72,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "CHAT_HEIGHT_UNFOCUSED"
+					}
+				},
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY":96,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "CHAT_WIDTH"
+					}
+				},
+				{
+					"type": "button",
+					"posX": 5,
+					"posY": 96,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "REDUCED_DEBUG_INFO"
+					}
+				},
+				{
+					"type": "button",
+					"posX": -155,
+					"posY": 120,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "NARRATOR"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.done",
+					"posX": -100,
+					"posY": 144,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "closeGui"
+					}
+				}
+			]
+		}
+	]
+}

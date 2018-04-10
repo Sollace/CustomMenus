@@ -1,0 +1,243 @@
+{
+	"drawBackground": false,
+	"root": true,
+	"elements": [
+		{
+			"type": "panorama",
+			"animate": true,
+			"animationSpeed": 1,
+			"blur": true,
+			"gradient": true
+		},
+		{
+			"type": "image",
+			"texture": "minecraft:textures/gui/title/minecraft.png",
+			"posX": -137,
+			"posY": 30,
+			"width": 155,
+			"height": 44,
+			"alignment": "top_center"
+		},
+		{
+			"type": "image",
+			"texture": "minecraft:textures/gui/title/minecraft.png",
+			"posX": 18,
+			"posY": 30,
+			"width": 155,
+			"height": 44,
+			"texY": 45,
+			"alignment": "top_center"
+		},
+		{
+			"type": "image",
+			"texture": "minecraft:textures/gui/title/edition.png",
+			"posX": -52,
+			"posY": 64,
+			"texW": 128,
+			"texH": 16,
+			"width": 128,
+			"height": 16,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"posY": -1,
+			"top": 43,
+			"unittop": "PERCENTAGE",
+			"bottom": 0,
+			"unitbottom": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "button",
+					"text": "menu.singleplayer",
+					"posX": -100,
+					"posY": 0,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "singleplayer"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.multiplayer",
+					"posX": -100,
+					"posY": 24,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "multiplayer"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.online",
+					"posX": -100,
+					"posY": 48,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "realms"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.options",
+					"posX": -100,
+					"posY": 84,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "options"
+					}
+				},
+				{
+					"type": "button",
+					"text": "menu.quit",
+					"posX": 2,
+					"posY": 84,
+					"width": 98,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "quit"
+					}
+				},
+				{
+					"type": "button",
+					"image": {
+						"texture": "minecraft:textures/gui/widgets.png",
+						"texX": 0,
+						"texY": 106
+					},
+					"text": "",
+					"posX": -124,
+					"posY": 84,
+					"width": 20,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "language"
+					}
+				},
+				{
+					"type": "button",
+					"text": "C",
+					"posX": -154,
+					"posY": 84,
+					"width": 20,
+					"height": 20,
+					"alignment": "top_center",
+					"visibility": {
+						"condition": "DEV_ENV"
+					},
+					"action": {
+						"type": "crash"
+					}
+				},
+				{
+					"type": "dummy",
+					"posX": 150,
+					"posY": 80,
+					"width": 20,
+					"height": 20,
+					"alignment": "top_center"
+				},
+				{
+					"type": "itemstack",
+					"posX": 143,
+					"posY": 86,
+					"alignment": "top_center",
+					"item": "minecraft:leather_leggings"
+				},
+				{
+					"type": "button",
+					"tooltip": "Skin",
+					"posX": 141,
+					"posY": 84,
+					"width": 20,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "com.voxelmodpack.hdskins.gui.GuiSkins"
+					}
+				}
+			]
+		},
+		{
+			"type": "label",
+			"text": "Copyright Mojang AB. Do not distribute!",
+			"posX": -198,
+			"posY": -9,
+			"color": -1,
+			"alignment": "bottom_right",
+			"action": {
+				"type": "openGui",
+				"gui": "credits"
+			}
+		},
+		{
+			"type": "label",
+			"format": {
+				"text": "Minecraft %s",
+				"parameters": [
+	               { "from": "minecraft:version"}
+                ]
+			},
+			"posX": 2,
+			"posY": -9,
+			"color": -1,
+			"alignment": "bottom_left",
+			"action": {
+				"type": "refresh"
+			}
+		},
+		{
+			"type": "splash-text",
+			"posX": 90,
+			"posY": 70,
+			"color": -256,
+			"angle": -20,
+			"alignment": "top_center",
+			"texts": "minecraft:texts/splashes.txt"
+		},
+		{
+			"type": "realms-notifications",
+			"posY": -49,
+			"posX": 0,
+			"top": 43,
+			"unittop": "PERCENTAGE",
+			"bottom": 0,
+			"unitbottom": "PERCENTAGE"
+		},
+		{
+			"type": "label",
+			"text": "title.oldgl1\ntitle.oldgl2",
+			"centered": true,
+			"visibility": {
+				"condition": "GL_WARN"
+			},
+			"background": 1428160512,
+			"alignment": "top_center",
+			"posX": 0,
+			"posY": 80,
+			"action": {
+				"type": "openLink",
+				"link": "https://help.mojang.com/customer/portal/articles/325948?ref=game"
+			}
+		},
+		{
+			"type": "litepanel"
+		}
+	]
+}

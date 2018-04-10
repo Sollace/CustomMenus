@@ -1,0 +1,71 @@
+buildscript {
+	repositories {
+		jcenter()
+		maven {
+			name 'forge'
+			url 'http://files.minecraftforge.net/maven/'
+		}
+		maven {
+			name = "sonatype"
+			url = "https://oss.sonatype.org/content/repositories/snapshots/"
+		}
+		maven {
+			name = 'sponge'
+			url = 'http://repo.spongepowered.org/maven'
+		}
+	}
+	dependencies {
+		classpath 'net.minecraftforge.gradle:ForgeGradle:' + project.forgeGradleVersion
+		classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
+	}
+}
+apply plugin: 'net.minecraftforge.gradle.liteloader'
+apply plugin: 'org.spongepowered.mixin'
+
+// Basic project information
+version = "1.0.0"
+group = "com.sollace"
+archivesBaseName = 'custommenus'
+ext.revision = "0"
+
+minecraft {
+	version = project.mcVersion
+	mappings = project.mcMappings
+	runDir = 'jars'
+}
+
+mixin {
+	defaultObfuscationEnv notch
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+sourceSets {
+	main {
+		java {
+			srcDir "src"
+		}
+		resources {
+			srcDirs "resources"
+		}
+		refMap = project.refCore
+	}	
+}
+
+processResources{
+	def props = [
+		version: version,
+		mcversion: minecraft.version,
+		revision: revision
+	]
+	inputs.properties props
+	from(sourceSets.main.resources.srcDirs) {
+		include 'litemod.json'
+		expand props
+	}
+	
+	// copy everything else, thats not the litemod.json
+	from(sourceSets.main.resources.srcDirs) {
+		exclude 'litemod.json'
+	}
+}

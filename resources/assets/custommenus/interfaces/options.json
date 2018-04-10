@@ -1,0 +1,224 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.title",
+			"centered": true,
+			"shadow": true,
+			"posY": 15,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "container",
+			"top": 11.9,
+			"unittop": "PERCENTAGE",
+			"elements": [
+				{
+					"type": "slider",
+					"posX": -155,
+					"posY": 0,
+					"min": 0,
+					"max": 1,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "adjustOption",
+						"option": "FOV"
+					}
+				},
+				{
+					"type": "button",
+					"visibility": {
+						"condition": "IN_GAME",
+						"invert": true
+					},
+					"posX": 5,
+					"posY": 0,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeOption",
+						"option": "REALMS_NOTIFICATIONS"
+					}
+				},
+				{
+					"type": "switch",
+					"visibility": {
+						"condition": "IN_GAME"
+					},
+					"name": "difficulty",
+					"values": [
+						"options.difficulty.peaceful",
+						"options.difficulty.easy",
+						"options.difficulty.normal",
+						"options.difficulty.hard"
+					],
+					"text": "options.difficulty",
+					"format": "%s: %s",
+					"posX": 5,
+					"posY": 0,
+					"width": 130,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "changeDifficulty"
+					}
+				},
+				{
+					"type": "toggle",
+					"visibility": {
+						"condition": "IN_GAME"
+					},
+					"on": {
+						"texture": "minecraft:textures/gui/widgets.png",
+						"texX": 0,
+						"texY": 146
+					},
+					"off": {
+						"texture": "minecraft:textures/gui/widgets.png",
+						"texX": 20,
+						"texY": 146
+					},
+					"posX": 135,
+					"posY": 0,
+					"width": 20,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "yesno",
+						"title": "difficulty.lock.title",
+						"question": {
+							"text": "difficulty.lock.question",
+							"parameters": [
+								{ "from": "difficulty" }
+							]
+						},
+						"yes": {
+							"type": "lockDifficulty",
+							"difficultySelectField": "difficulty"
+						}
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.skinCustomisation",
+					"posX": -155,
+					"posY": 54,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "customizeskin"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.sounds",
+					"posX": 5,
+					"posY": 54,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "soundoptions"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.video",
+					"posX": -155,
+					"posY": 78,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "videosettings"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.controls",
+					"posX": 5,
+					"posY": 78,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "controls"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.language",
+					"posX": -155,
+					"posY": 102,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "language"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.chat.title",
+					"posX": 5,
+					"posY": 102,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "chatoptions"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.resourcepack",
+					"posX": -155,
+					"posY": 126,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "resourcepacks"
+					}
+				},
+				{
+					"type": "button",
+					"text": "options.snooper.view",
+					"posX": 5,
+					"posY": 126,
+					"width": 150,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "openGui",
+						"gui": "snooper"
+					}
+				},
+				{
+					"type": "button",
+					"text": "gui.done",
+					"posX": -100,
+					"posY": 180,
+					"width": 200,
+					"height": 20,
+					"alignment": "top_center",
+					"action": {
+						"type": "closeGui"
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "options.language",
+			"centered": true,
+			"shadow": true,
+			"posY": 16,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "list",
+			"top": 32,
+			"bottom": 61,
+			"itemHeight": 18,
+			"listWidth": 246,
+			"datasource": "languages"
+		},
+		{
+			"type": "label",
+			"text": "options.languageWarning",
+			"format": "(%s)",
+			"color": 8421504,
+			"centered": true,
+			"posX": 0,
+			"posY": -56,
+			"alignment": "bottom_center"
+		},
+		{
+			"type": "button",
+			"posX": -155,
+			"posY": -38,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "changeOption",
+				"option": "FORCE_UNICODE_FONT"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.done",
+			"posX": 5,
+			"posY": -38,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}

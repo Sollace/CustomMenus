@@ -1,0 +1,77 @@
+{
+	"elements": [
+		{
+			"type": "label",
+			"text": "lanServer.title",
+			"color": 16777215,
+			"centered": true,
+			"shadow": true,
+			"posY": 50,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "label",
+			"text": "lanServer.otherPlayers",
+			"color": 16777215,
+			"centered": true,
+			"posY": 82,
+			"posX": 0,
+			"alignment": "top_center"
+		},
+		{
+			"type": "switch",
+			"text": "selectWorld.gameMode",
+			"name": "gamemode",
+			"values": [
+				"selectWorld.gameMode.survival",
+				"selectWorld.gameMode.creative",
+				"selectWorld.gameMode.adventure",
+				"selectWorld.gameMode.spectator"
+			],
+			"posX": -155,
+			"posY": 100,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center"
+		},
+		{
+			"type": "toggle",
+			"text": "selectWorld.allowCommands",
+			"format": "%s%s",
+			"name": "cheats",
+			"value": false,
+			"posX": 5,
+			"posY": 100,
+			"width": 150,
+			"height": 20,
+			"alignment": "top_center"
+		},
+		{
+			"type": "button",
+			"text": "lanServer.start",
+			"posX": -155,
+			"posY": -28,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "openLan",
+				"difficultyField": "gamemode",
+				"allowCheatsField": "cheats"
+			}
+		},
+		{
+			"type": "button",
+			"text": "gui.cancel",
+			"posX": 5,
+			"posY": -28,
+			"width": 150,
+			"height": 20,
+			"alignment": "bottom_center",
+			"action": {
+				"type": "closeGui"
+			}
+		}
+	]
+}
